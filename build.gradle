@@ -29,7 +29,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.4.2'
         classpath 'org.apache.httpcomponents:httpclient:4.5.4'
     }
 }
@@ -73,7 +73,7 @@ def bazelLocation = '/usr/local/bin/bazel'
 
 // import DownloadModels task
 project.ext.ASSET_DIR = projectDir.toString() + '/assets'
-project.ext.TMP_DIR   = project.buildDir.toString() + '/downloads'
+project.ext.TMP_DIR = project.buildDir.toString() + '/downloads'
 
 // Download default models; if you wish to use your own models then
 // place them in the "assets" directory and comment out this line.
@@ -82,13 +82,13 @@ apply from: "download-models.gradle"
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 29
 
     if (nativeBuildSystem == 'cmake') {
         defaultConfig {
             applicationId = 'org.tensorflow.demo'
             minSdkVersion 21
-            targetSdkVersion 23
+            targetSdkVersion 29
             ndk {
                 abiFilters "${cpuType}"
             }
@@ -141,7 +141,7 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-        targetSdkVersion 23
+        targetSdkVersion 29
         minSdkVersion 21
     }
 }
@@ -163,11 +163,11 @@ task buildNativeMake(type: Exec) {
     workingDir '../../..'
     commandLine 'tensorflow/contrib/makefile/build_all_android.sh',  \
          '-s',  \
-         'tensorflow/contrib/makefile/sub_makefiles/android/Makefile.in',  \
+         'tensorf low/c ontrib/makefi le/sub_makefiles/android/Makefile.in',  \
          '-t',  \
-         'libtensorflow_inference.so libtensorflow_demo.so all'  \
+         'libtens orflo w_inference.s o libtensorflow_demo.so all'  \
          , '-a', cpuType  \
-         //, '-T'  // Uncomment to skip protobuf and speed up subsequent builds.
+         //, '-T'  //  Uncomment to skip protobuf and speed up subsequent builds.
 }
 
 
@@ -192,6 +192,7 @@ tasks.whenTaskAdded { task ->
 }
 
 dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     if (nativeBuildSystem == 'cmake' || nativeBuildSystem == 'none') {
         implementation 'org.tensorflow:tensorflow-android:+'
     }
