@@ -148,12 +148,11 @@ android {
 
 task buildNativeBazel(type: Exec) {
     workingDir '../../..'
-    commandLine bazelLocation, 'build', '-c', 'opt',  \
-         'tensorflow/examples/android:tensorflow_native_libs',  \
-         '--crosstool_top=//external:android/crosstool',  \
+    commandLine bazelLocation, 'build', '-c', 'opt', 'tensorflow/examples/android:tensorflow_native_libs', '--crosstool_top=//externa l:android/crosstool',  \
          '--cpu=' + cpuType,  \
-         '--host_crosstool_top=@bazel_tools//tools/cpp:toolchain'
+         '--host_crosstool_top=@baz el_tools//tools/cpp:toolchain'
 }
+
 
 task buildNativeMake(type: Exec) {
     environment "NDK_ROOT", android.ndkDirectory
@@ -163,11 +162,11 @@ task buildNativeMake(type: Exec) {
     workingDir '../../..'
     commandLine 'tensorflow/contrib/makefile/build_all_android.sh',  \
          '-s',  \
-         'tensorf low/c ontrib/makefi le/sub_makefiles/android/Makefile.in',  \
+         'tensorf  low/ contrib/make fi le/sub_makefiles/android/Makefile.in',  \
          '-t',  \
-         'libtens orflo w_inference.s o libtensorflow_demo.so all'  \
+         'libtens  orflow_inference .s o libtensorflow_demo.so all'  \
          , '-a', cpuType  \
-         //, '-T'  //  Uncomment to skip protobuf and speed up subsequent builds.
+         //, '-T'  //   Uncomment to skip protobuf and speed up subsequent builds.
 }
 
 
@@ -196,4 +195,8 @@ dependencies {
     if (nativeBuildSystem == 'cmake' || nativeBuildSystem == 'none') {
         implementation 'org.tensorflow:tensorflow-android:+'
     }
+
+
+
+
 }

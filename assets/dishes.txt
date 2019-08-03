@@ -1,11 +1,11 @@
 ???
-SabaFish,Price:210,Kcal:180
-Rice,Price:150,Kcal:116
+SabaFish,Price:210,Kcal:190
+Rice,Price:150,Kcal:190
 BeefPotato,Price:140,Kcal:250
 Tea,Price:0,Kcal:0
 Salad,Price:100,Kcal:68
 JapaeseSet,Price:550,Kcal:750
-JapaneseFriedVeg,Price:210,Kcal:300
+JapaneseFriedVeg,Price:210,Kcal:330
 Tofu,Price:140,Kcal:84
-Friedchicken,Price:360,Kcal:355
+Friedchicken,Price:360,Kcal:400
 

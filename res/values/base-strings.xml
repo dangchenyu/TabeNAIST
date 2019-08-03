@@ -16,9 +16,9 @@
 -->
 
 <resources>
-    <string name="app_name">TensorFlow Demo</string>
+    <string name="app_name">TabeNAIST</string>
     <string name="activity_name_classification">TF Classify</string>
-    <string name="activity_name_detection">TF Detect</string>
+    <string name="activity_name_detection">Real-Time Detecting</string>
     <string name="activity_name_stylize">TF Stylize</string>
     <string name="activity_name_speech">TF Speech</string>
 </resources>

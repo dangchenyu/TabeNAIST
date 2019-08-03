@@ -266,6 +266,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                 cropToFrameTransform.mapRect(location);
                 result.setLocation(location);
                 mappedRecognitions.add(result);
+                System.out.println("dsa");
               }
             }
 

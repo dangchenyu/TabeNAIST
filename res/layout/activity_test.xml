@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".testActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/picture1">
+
 
     <Button
         android:layout_width="wrap_content"
@@ -15,5 +17,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:onClick="Takephoto"
+        android:text="Take a photo" />
 
 </LinearLayout>

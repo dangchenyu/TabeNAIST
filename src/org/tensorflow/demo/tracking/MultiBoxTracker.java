@@ -296,9 +296,12 @@ public class MultiBoxTracker {
     }
 
     logger.i("%d rects to track", rectsToTrack.size());
+    System.out.println("dd");
     for (final Pair<Float, Recognition> potential : rectsToTrack) {
       handleDetection(originalFrame, timestamp, potential);
+      System.out.println("dff");
     }
+    System.out.println("dd");
   }
 
   private void handleDetection(
