@@ -10,20 +10,24 @@
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Real-time detection"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Real-time Detection"
+        android:textSize="50px"
         android:onClick="Detect"
+        android:background="@drawable/btn_nor_down"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="555dp"
         />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_nor_down"
         android:onClick="Takephoto"
-        android:text="Take a photo" />
+        android:text="Photo Meal"
+        android:textSize="50px"/>
 
 </LinearLayout>
